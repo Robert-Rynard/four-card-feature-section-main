@@ -1,0 +1,117 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dk-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-lt-gray: hsl(0, 0%, 98%);
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+body {
+  background-color: var(--very-lt-gray);
+}
+
+main {
+  color: var(--grayish-blue);
+  padding: 2rem;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 1.6rem;
+  font-weight: 200;
+  color: var(--very-dk-blue);
+  margin: 2rem auto 1rem;
+}
+
+.intro__emphasis {
+  display: block;
+  font-weight: 600;
+}
+
+.grid {
+  margin: 5rem auto 3rem;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1.5rem;
+  max-width: 70rem;
+}
+
+.card {
+  background-color: white;
+  max-width: 21rem;
+  height: 15rem;
+  padding: 1rem 2rem;
+  background-repeat: no-repeat;
+  background-position: bottom 2rem right 2rem;
+  border-top: 5px solid;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.274);
+  margin: 0 auto;
+}
+
+.card h2 {
+  color: var(--very-dk-blue);
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+
+.supervisor {
+  background-image: url(./images/icon-supervisor.svg);
+  border-color: var(--cyan);
+}
+
+.team {
+  background-image: url(./images/icon-team-builder.svg);
+  border-color: var(--red);
+}
+
+.karma {
+  background-image: url(./images/icon-karma.svg);
+  border-color: var(--orange);
+}
+
+.calculator {
+  background-image: url(./images/icon-calculator.svg);
+  border-color: var(--blue);
+}
+
+@media (min-width: 800px) {
+  .intro h1 {
+    font-size: 2.4rem;
+  }
+
+  .intro p {
+    max-width: 38%;
+    margin: 0 auto;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: unset;
+  }
+
+  .card {
+    grid-row: 2 span;
+  }
+
+  .supervisor {
+    grid-row: 2 / 2 span;
+  }
+
+  .calculator {
+    grid-row: 2 / 2 span;
+    grid-column: 3;
+  }
+}
